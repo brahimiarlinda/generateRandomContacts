@@ -20,17 +20,17 @@ jane.brown@example.com,Jane,Brown,+1 303-832-5787
 
 To install the project, run the following command:
 
-\```bash
+```bash
 npm install
-\```
+```
 
 ## Usage
 
 To generate 100 contacts and export them to a file named `file-name.txt` in the root of the project, execute the following command:
 
-\```bash
+```bash
 npm run generate:data -- 100 > file-name.txt
-\```
+```
 
 ## Tips
 
