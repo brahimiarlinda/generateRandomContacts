@@ -18,6 +18,7 @@ jane.brown@example.com,Jane,Brown,+1 303-832-5787
 
 ## Installation
 
+At the moment there are no dependencies but in case you will alter this project and install any npm package you need to install the dependecies as well.
 To install the project, run the following command:
 
 ```bash
@@ -35,4 +36,4 @@ npm run generate:data -- 100 > file-name.txt
 ## Tips
 
 To identify duplicate entries, you can use the following online tool: [Somacon Duplicate Line Tool](https://www.somacon.com/p568.php)
-![Screenshot](./Screenshot 2023-09-27 at 10.51.42.png)
+![Screenshot](./image.png)
