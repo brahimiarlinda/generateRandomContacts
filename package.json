@@ -1,0 +1,13 @@
+{
+  "name": "extract-ids-from-json",
+  "version": "1.0.0",
+  "description": "I extract only the IDs of buildings or sites from big json file full various information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:data": "node generateRandomContact.js"
+  },
+  "author": "Arlinda Brahimi",
+  "license": "ISC",
+  "dependencies": {}
+}
