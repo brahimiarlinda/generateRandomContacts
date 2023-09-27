@@ -35,3 +35,4 @@ npm run generate:data -- 100 > file-name.txt
 ## Tips
 
 To identify duplicate entries, you can use the following online tool: [Somacon Duplicate Line Tool](https://www.somacon.com/p568.php)
+![Screenshot](./Screenshot 2023-09-27 at 10.51.42.png)
