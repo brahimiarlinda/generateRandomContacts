@@ -4,6 +4,7 @@
 
 It will generate as many contacts as you want with the format below:
 
+```csv
 Email,First Name,Last Name,Phone Number
 emily.williams@mail.com,Emily,Williams,+1 919-298-4641
 jane.smith@example.com,Jane,Smith,+1 738-231-8908
@@ -23,3 +24,8 @@ jane.brown@example.com,Jane,Brown,+1 303-832-5787
 The command below will generate 100 contacts and will export them to a file named file-name.txt in the root of the project
 
 ```npm run generate:data -- 100 > file-name.txt
+
+## Tips
+
+If you want to identify the duplicates you can use https://www.somacon.com/p568.php
+
