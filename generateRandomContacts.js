@@ -1,20 +1,24 @@
-const faker = require('faker');
+const { faker } = require('@faker-js/faker');
+const fs = require('fs');
 
-function generateRandomContact(numContacts) {
-  // Print CSV header
-  console.log("Email,First Name,Last Name,Phone Number");
+function generateRandomContact(numContacts, filePath) {
+  const stream = fs.createWriteStream(filePath, {flags: 'w'});
+  stream.write("Email,First Name,Last Name,Phone Number\n");
 
   for (let i = 0; i < numContacts; i++) {
-    const firstName = faker.name.firstName();
-    const lastName = faker.name.lastName();
-    const email = faker.internet.email(firstName, lastName);
-    const phoneNumber = faker.phone.phoneNumber('+1 ###-###-####');
-
-    // Print CSV row
-    console.log(`${email},${firstName},${lastName},${phoneNumber}`);
+    const firstName = faker.person.firstName();
+    const lastName = faker.person.lastName();
+    const email =faker.internet.email({ firstName, lastName })
+    const phoneNumber = faker.phone.imei();
+    stream.write(`${email},${firstName},${lastName},${phoneNumber}\n`);
   }
+
+  stream.end();
 }
 
-// Usage example: Generate 5 random contacts
-const numContacts = process.argv[2] || 1;  // Get the number from the command line arguments or default to 1
-generateRandomContact(numContacts);
+let numContacts = Number(process.argv[2]) || 1;
+let fileName = process.argv[3] || 'file-name.txt';
+
+numContacts = Number.isInteger(numContacts) && numContacts > 0 ? numContacts : 1;
+
+generateRandomContact(numContacts, fileName);

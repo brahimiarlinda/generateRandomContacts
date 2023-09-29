@@ -27,10 +27,10 @@ npm install
 
 ## Usage
 
-To generate 100 contacts and export them to a file named `file-name.txt` in the root of the project, execute the following command:
+To generate 100 contacts and export them to a file named `output.txt` in the root of the project, execute the following command:
 
 ```bash
-npm run generate:data -- 100 > file-name.txt
+npm run generate:data 100 output.txt
 ```
 
 ## Tips
